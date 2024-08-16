@@ -23,12 +23,14 @@ The flashcard application is designed to help users create, manage, and take qui
 </ol>
 
 
-
 ## ERD (Entity-Relationship Diagram)
 Lorem ipsum...
 
 ## Stretch Goals
-Lorem ipsum...
+<ol>
+    <li>Have a service that randomly generates quizzes based on the flashcards.</li>
+    <li>Make it look nice with React.</li>
+</ol>
 
 ## Conclusion
 This project cover the main points in the curriculum we follow in the cohort "240708-NET-FS" of Revature.
