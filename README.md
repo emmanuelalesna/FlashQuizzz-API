@@ -20,6 +20,9 @@ The flashcard application is designed to help users create, manage, and take qui
         <li>Allow users to read the cards in a random order and flip them.</li>
     </ul>
     </li>
+    <li>
+        Other P3 requirements.
+    </li>
 </ol>
 
 
