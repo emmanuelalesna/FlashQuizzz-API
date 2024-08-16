@@ -10,18 +10,14 @@ The flashcard application is designed to help users create, manage, and take qui
     <ul>
         <li>Users will be able to create an account or log in.</li>
         <li>Secure authentication mechanism to ensure user data privacy.</li>
+        <li>Use Microsoft identity framework.</li>
     </ul>
     </li>
     <li>
     Manage questions:
     <ul>
-        <li>Authenticate users will allow to do CRUD on the questions</li>
-    </ul>
-    </li>
-    <li>
-    Lorem ipsum:
-    <ul>
-        <li>Lorem ipsum...</li>
+        <li>Authenticated users will allow to do CRUD on the questions.</li>
+        <li>Allow users to read the cards in a random order and flip them.</li>
     </ul>
     </li>
 </ol>
