@@ -1,5 +1,7 @@
 # FlashQuizzz
 
+![Process Flow](./Project3-FlashQuizz.jpeg "Process flow of FlashQuizzz")
+
 ## Project Overview
 The flashcard application is designed to help users create, manage, and take quizzes using a set of flashcards. The backend is built using ASP.NET Core with Entity Framework for data management, while the frontend is implemented using React.
 
