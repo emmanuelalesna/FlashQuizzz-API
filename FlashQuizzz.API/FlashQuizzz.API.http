@@ -1,0 +1,6 @@
+@FlashQuizzz.API_HostAddress = http://localhost:5010
+
+GET {{FlashQuizzz.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
