@@ -13,7 +13,8 @@ The flashcard application is designed to help users create, manage, and take qui
 2. Manage questions:
     * Authenticated users will allow to do CRUD on the questions.
     * Allow users to read the cards in a random order and flip them.
-3. Other P3 requirements.
+3. CI/CD Pipeline. 
+4. Frontend and Backend hosted on Azure Cloud Services.
 
 
 ## ERD (Entity-Relationship Diagram)
