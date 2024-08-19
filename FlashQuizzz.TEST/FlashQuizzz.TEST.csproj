@@ -19,5 +19,8 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlashQuizzz.API\FlashQuizzz.API.csproj" />
+  </ItemGroup>
 
 </Project>
