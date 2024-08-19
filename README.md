@@ -17,7 +17,7 @@ The flashcard application is designed to help users create, manage, and take qui
 
 
 ## ERD (Entity-Relationship Diagram)
-Lorem ipsum...
+![Entity Relationship Diagram](./Project3-FlashQuizz-ERD.jpeg "Entity Relationship Diagram of FlashQuizzz")
 
 ## Stretch Goals
 1. Have a service that randomly generates quizzes based on the flashcards.
