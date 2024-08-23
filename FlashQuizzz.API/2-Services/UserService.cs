@@ -50,7 +50,7 @@ public class UserService : IUserService
 
         user.FirstName = userToUpdate.FirstName;
         user.LastName = userToUpdate.LastName;
-        user.UserName = userToUpdate.Username;
+        user.UserName = userToUpdate.Email;
         
         var result = await _userManager.UpdateAsync(user);
 
@@ -73,7 +73,7 @@ public class UserService : IUserService
 
     public async Task<SignInResult> LoginUser(UserDTO userLogin)
     {
-        return await _signInManager.PasswordSignInAsync(userLogin.Username, userLogin.Password, false, false);
+        return await _signInManager.PasswordSignInAsync(userLogin.Email, userLogin.Password, false, false);
     }
 
     public async Task LogoutUser()

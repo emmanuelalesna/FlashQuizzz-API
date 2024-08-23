@@ -10,7 +10,7 @@ public static class UserUtility
         {
             FirstName = userDTO.FirstName, 
             LastName = userDTO.LastName,
-            UserName = userDTO.Username,
+            UserName = userDTO.Email,
             CratedDate = DateTime.UtcNow
         };
         return newUser;
