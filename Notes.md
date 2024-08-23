@@ -17,6 +17,18 @@
   
     `dotnet new gitignore`
 
+* List of packages:
+  - `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`
+  - `dotnet add package Microsoft.EntityFrameworkCore.Design`
+  - `dotnet add package Microsoft.EntityFrameworkCore.Tools`
+  - `dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore`
+  - `dotnet add package Microsoft.Extensions.Identity.Core`
+  - `dotnet add package Microsoft.Extensions.Identity.Stores`
+
+*###* Steps to run unittest report:
+- `dotnet test --collect:"XPlat Code Coverage"` (This will generate a TestResult folder along with a guid.)
+- `reportgenerator -reports:".\TestResults\{guid}\coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:Html -classfilters:"+SERVICES_NAMESPACE.*;"`  (The -classfilters:"+SERVICES_NAMESPACE.*;" is optional, this is to generate a report only for the services.)
+
 * Create .Net xUnit:
     
     `dotnet new xunit -n FlashQuizzz.TEST`
