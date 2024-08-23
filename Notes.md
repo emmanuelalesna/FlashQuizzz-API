@@ -17,6 +17,14 @@
   
     `dotnet new gitignore`
 
+* *Add a new migration
+
+    `dotnet ef migrations add {NameofMigration}`
+
+* *Update the database with the seeded data:
+    `dotnet ef migrations add SeedData`
+    `dotnet ef database update`
+
 * List of packages:
   - `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`
   - `dotnet add package Microsoft.EntityFrameworkCore.Design`
