@@ -6,6 +6,6 @@ public class QuestionCategory
 
   public required string Name { get; set; }
   public bool Status { get; set; }
-//  public Question? Question { get; set; }
+//public ICollection<Question>? Question{ get; }
 
  }
