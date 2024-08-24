@@ -1,20 +1,20 @@
-using System.Security.Claims;
-using FlashQuizzz.API.Exceptions;
-using FlashQuizzz.API.Models;
-using FlashQuizzz.API.Services;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 
 namespace FlashQuizzz.API.Controller;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("/")]
 public class TestController : ControllerBase
 {
-    [HttpGet("helloworld")]
+    [HttpGet]
+    public IActionResult Get()
+    {
+        return Ok("Hello, World! /");
+    }
+    
+    [HttpGet("api/[controller]/helloworld")]
     public IActionResult GetHelloWorld()
     {
-        return Ok("Hello World");
+        return Ok("Hello World /api/test/helloworld");
     }
 }
