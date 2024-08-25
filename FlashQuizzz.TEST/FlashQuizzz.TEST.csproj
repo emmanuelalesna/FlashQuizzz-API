@@ -11,7 +11,14 @@
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="coverlet.msbuild" Version="6.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="ReportGenerator" Version="5.3.8" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
   </ItemGroup>
@@ -22,5 +29,11 @@
   <ItemGroup>
     <ProjectReference Include="..\FlashQuizzz.API\FlashQuizzz.API.csproj" />
   </ItemGroup>
+
+  <Target Name="Coverage" AfterTargets="Test">
+    <Exec Command="dotnet test /p:CollectCoverage=true /p:CoverletOutput=./TestResults/ /p:CoverletOutputFormat=cobertura" />
+    <Exec Command="reportgenerator -reports:./TestResults/coverage.cobertura.xml -targetdir:./TestResults/CoverageReport -reporttypes:Html -classfilters:'+FlashQuizzz.API.Services.*;'" />
+  </Target>
+
 
 </Project>
