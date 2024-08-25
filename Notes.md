@@ -33,6 +33,7 @@
   - `dotnet add package Microsoft.Extensions.Identity.Core`
   - `dotnet add package Microsoft.Extensions.Identity.Stores`
   - `dotnet add package Swashbuckle.AspNetCore.Filters --version 8.0.2`
+  - `dotnet add package Azure.Monitor.OpenTelemetry.AspNetCore`
 
 *###* Steps to run unittest report:
 - `dotnet test --collect:"XPlat Code Coverage"` (This will generate a TestResult folder along with a guid.)

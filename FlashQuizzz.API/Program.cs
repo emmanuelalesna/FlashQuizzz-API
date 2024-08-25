@@ -1,4 +1,5 @@
 using System.Text;
+using Azure.Monitor.OpenTelemetry.AspNetCore;
 using FlashQuizzz.API.DAO;
 using FlashQuizzz.API.DAO.Interfaces;
 using FlashQuizzz.API.Models;
@@ -31,6 +32,9 @@ builder.Services.AddScoped<IFlashCardService, FlashCardService>();
 //
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IFlashCardRepo, FlashCardRepo>();
+
+// Add OpenTelemetry and configure it to use Azure Monitor.
+builder.Services.AddOpenTelemetry().UseAzureMonitor();
 
 builder.Services.AddControllers().AddJsonOptions(options =>
     {
