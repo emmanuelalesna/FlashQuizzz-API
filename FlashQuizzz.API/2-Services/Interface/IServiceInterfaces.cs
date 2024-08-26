@@ -34,6 +34,8 @@ public interface IFlashCardService
 
     public Task<ICollection<FlashCard>> GetByUser(string ID);
 
+    public Task<ICollection<FlashCard>> GetByCategory(int ID);
+
     public Task<FlashCard?> GetByFlashCardNumberAndUserID(int flashCardID, string userId);
     public Task<FlashCard?> GetByFlashCardNumber(int flashCardNumber);
 
@@ -49,3 +51,44 @@ public interface IFlashCardService
     // Delete
     Task<FlashCard?> Delete(int ID);
 }
+
+public interface IFlashCardCategoryService
+{
+    // Create
+    Task<FlashCardCategory> CreateFlashCardCategory(FlashCardCategoryDTO newFlashCardCategory);
+
+    // Read
+    Task<FlashCardCategory?> GetFlashCardCategoryById(int flashCardID);
+
+    Task<ICollection<FlashCardCategory>> GetAllCategories();
+
+    Task<FlashCardCategory?> GetByFlashCardCategoryName(string flashCardName);
+
+    // Update
+    Task<bool> Update(int ID, FlashCardCategoryDTO newFlashCard);
+
+    // Delete
+    Task<FlashCardCategory?> Delete(int ID);
+}
+
+public interface IFlashCardAnswerService
+{
+    // Create
+    Task<FlashCardAnswer> CreateFlashCardAnswer(FlashCardAnswerDTO newFlashCardAnswer);
+
+    // Read
+    Task<FlashCardAnswer?> GetFlashCardAnswerById(int flashCardID);
+    
+    Task<ICollection<FlashCardAnswer>?> GetFlashCardAnswerByFlashCardId(int flashCardID);
+
+    Task<ICollection<FlashCardAnswer>> GetAllAnswers();
+
+    Task<FlashCardAnswer?> GetByFlashCardAnswerName(string flashCardName);
+
+    // Update
+    Task<bool> Update(int ID, FlashCardAnswerDTO newFlashCard);
+
+    // Delete
+    Task<FlashCardAnswer?> Delete(int ID);
+}
+

@@ -24,10 +24,40 @@ public static class FlashCardUtility
         FlashCard newFlashCard = new FlashCard()
         {
             FlashCardQuestion = flashCardDTO.FlashCardQuestion, 
+            FlashCardCategoryID = flashCardDTO.FlashCardCategoryID,
             CreatedDate = flashCardDTO.CreatedDate,
             FlashCardAnswer = flashCardDTO.FlashCardAnswer,
-            UserID = flashCardDTO.UserID!
+            UserID = flashCardDTO.UserID
         };
         return newFlashCard;
+    }
+}
+
+public static class FlashCardCategoryUtility
+{
+    public static FlashCardCategory DTOToFlashCardCategory(FlashCardCategoryDTO flashCardCategoryDTO)
+    {
+        FlashCardCategory newFlashCardCategory = new FlashCardCategory()
+        {
+            FlashCardCategoryName = flashCardCategoryDTO.FlashCardCategoryName, 
+            CreatedDate = flashCardCategoryDTO.CreatedDate,
+            FlashCardCategoryStatus = flashCardCategoryDTO.FlashCardCategoryStatus
+        };
+        return newFlashCardCategory;
+    }
+}
+
+public static class FlashCardAnswerUtility
+{
+    public static FlashCardAnswer DTOToFlashCardAnswer(FlashCardAnswerDTO flashCardAnswerDTO)
+    {
+        FlashCardAnswer newFlashCardAnswer = new FlashCardAnswer()
+        {
+            FlashCardID = (int)flashCardAnswerDTO.FlashCardID,
+            FlashCardAnswerName = flashCardAnswerDTO.FlashCardAnswerName, 
+            CreatedDate = flashCardAnswerDTO.CreatedDate,
+            FlashCardIsAnswer = flashCardAnswerDTO.FlashCardIsAnswer
+        };
+        return newFlashCardAnswer;
     }
 }

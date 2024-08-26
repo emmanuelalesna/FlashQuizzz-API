@@ -29,9 +29,13 @@ builder.Services.AddSwaggerGen(options => {
 //and inject dependecies where needed
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IFlashCardService, FlashCardService>();
+builder.Services.AddScoped<IFlashCardCategoryService, FlashCardCategoryService>();
+builder.Services.AddScoped<IFlashCardAnswerService, FlashCardAnswerService>();
 //
 builder.Services.AddScoped<IUserRepo, UserRepo>();
 builder.Services.AddScoped<IFlashCardRepo, FlashCardRepo>();
+builder.Services.AddScoped<IFlashCardCategoryRepo, FlashCardCategoryRepo>();
+builder.Services.AddScoped<IFlashCardAnswerRepo, FlashCardAnswerRepo>();
 
 // Add OpenTelemetry and configure it to use Azure Monitor.
 builder.Services.AddOpenTelemetry().UseAzureMonitor();
@@ -40,6 +44,13 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
+
+// Load configuration from appsettings.json and environment-specific files
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+    .AddEnvironmentVariables();
 
 builder.Services.AddDbContext<AppDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

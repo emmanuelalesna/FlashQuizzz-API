@@ -23,6 +23,11 @@ public class FlashCardService : IFlashCardService
         throw new NotImplementedException();
     }
 
+    public Task<ICollection<FlashCard>> GetByCategory(int ID)
+    {
+        throw new NotImplementedException();
+    }
+
     public Task<FlashCard?> GetByFlashCardName(string flashCardName)
     {
         throw new NotImplementedException();

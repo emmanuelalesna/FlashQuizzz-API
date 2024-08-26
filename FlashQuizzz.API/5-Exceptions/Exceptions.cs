@@ -20,3 +20,17 @@ public class InvalidFlashCardException : Exception
     public InvalidFlashCardException(string message) : base(message){}
     public InvalidFlashCardException(string message, Exception inner) : base(message, inner){}
 }
+
+public class InvalidFlashCardCategoryException : Exception
+{
+    public InvalidFlashCardCategoryException(){}
+    public InvalidFlashCardCategoryException(string message) : base(message){}
+    public InvalidFlashCardCategoryException(string message, Exception inner) : base(message, inner){}
+}
+
+public class InvalidFlashCardAnswerException : Exception
+{
+    public InvalidFlashCardAnswerException(){}
+    public InvalidFlashCardAnswerException(string message) : base(message){}
+    public InvalidFlashCardAnswerException(string message, Exception inner) : base(message, inner){}
+}
