@@ -35,6 +35,13 @@ public class FlashCardRepo : IFlashCardRepo
                 .FirstOrDefaultAsync(r => r.FlashCardID == ID);
     }
 
+    public async Task<ICollection<FlashCard>>? GetByCategoryID(int ID)
+    {
+        return await _context.FlashCard
+                .Where(r => r.FlashCardCategoryID == ID)
+                .ToListAsync();
+    }
+
     public async Task<FlashCard?> GetByFlashCardQuestion(string flashCardQuestion)
     {
         return await _context.FlashCard

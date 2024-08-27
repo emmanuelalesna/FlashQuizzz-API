@@ -62,7 +62,7 @@ public interface IFlashCardCategoryService
 
     Task<ICollection<FlashCardCategory>> GetAllCategories();
 
-    Task<FlashCardCategory?> GetByFlashCardCategoryName(string flashCardName);
+    Task<FlashCardCategory?> GetByFlashCardCategoryByName(string flashCardName);
 
     // Update
     Task<bool> Update(int ID, FlashCardCategoryDTO newFlashCard);

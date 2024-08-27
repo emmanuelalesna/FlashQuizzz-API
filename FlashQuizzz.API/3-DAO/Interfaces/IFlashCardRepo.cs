@@ -10,6 +10,8 @@ public interface IFlashCardRepo
     // Read
     public Task<FlashCard?> GetByID(int ID);
 
+    public Task<ICollection<FlashCard>>? GetByCategoryID(int ID);
+
     public Task<ICollection<FlashCard>>? GetAll();
 
     // Update

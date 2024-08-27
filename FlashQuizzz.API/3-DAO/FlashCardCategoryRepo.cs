@@ -34,7 +34,7 @@ public class FlashCardCategoryRepo : IFlashCardCategoryRepo
                 .FirstOrDefaultAsync(r => r.FlashCardCategoryID == ID);
     }
 
-    public async Task<FlashCardCategory?> GetByFlashCardCategoryName(string flashCardCategoryName)
+    public async Task<FlashCardCategory?> GetByName(string flashCardCategoryName)
     {
         return await _context.FlashCardCategory
                 .FirstOrDefaultAsync(r => r.FlashCardCategoryName == flashCardCategoryName);

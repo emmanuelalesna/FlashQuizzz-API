@@ -9,6 +9,7 @@ public interface IFlashCardCategoryRepo
 
     // Read
     public Task<FlashCardCategory?> GetByID(int ID);
+    public Task<FlashCardCategory?> GetByName(string name);
 
     public Task<ICollection<FlashCardCategory>>? GetAll();
 
