@@ -69,12 +69,12 @@ namespace FlashQuizzz.API.Services
             // return await _context.FlashCard.ToListAsync();
         }
 
-        public async Task<ICollection<FlashCard>> GetByCategory(int flashCardCategoryID)
+        public async Task<ICollection<FlashCard>> GetByCategoryId(int flashCardCategoryID)
         {
             if (flashCardCategoryID < 1) throw new ArgumentException("Invalid ID");
 
             ICollection<FlashCard> flashCard = await _flashCardRepo.GetByCategoryID(flashCardCategoryID);
-             List<FlashCard> flashCardsList = flashCard.ToList();
+            List<FlashCard> flashCardsList = flashCard.ToList();
 
             if(flashCardsList.IsNullOrEmpty())
             {

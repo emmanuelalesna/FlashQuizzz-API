@@ -58,6 +58,16 @@ namespace FlashQuizzz.API.Controllers
             return Ok(flashCard);
         }
 
+        [HttpGet("category/{id}")]
+        public async Task<IActionResult> GetFlashCardCategoryById(int id)
+        {
+            var flashCard = await _flashCardService.GetByCategoryId(id);
+            if (flashCard == null)
+                return NotFound($"Category {id} does not exist!");
+
+            return Ok(flashCard);
+        }
+
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetByUser(string userId)
         {

@@ -34,7 +34,7 @@ public interface IFlashCardService
 
     public Task<ICollection<FlashCard>> GetByUser(string ID);
 
-    public Task<ICollection<FlashCard>> GetByCategory(int ID);
+    public Task<ICollection<FlashCard>> GetByCategoryId(int ID);
 
     public Task<FlashCard?> GetByFlashCardNumberAndUserID(int flashCardID, string userId);
     public Task<FlashCard?> GetByFlashCardNumber(int flashCardNumber);
