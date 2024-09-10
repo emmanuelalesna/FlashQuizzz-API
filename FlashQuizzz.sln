@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlashQuizzz.API", "FlashQuizzz.API\FlashQuizzz.API.csproj", "{DB1FE3C1-729C-41EE-89DB-EDFC44C54934}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB1FE3C1-729C-41EE-89DB-EDFC44C54934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1FE3C1-729C-41EE-89DB-EDFC44C54934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1FE3C1-729C-41EE-89DB-EDFC44C54934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1FE3C1-729C-41EE-89DB-EDFC44C54934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062A855B-26C6-415D-AD98-8578B6F78657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062A855B-26C6-415D-AD98-8578B6F78657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062A855B-26C6-415D-AD98-8578B6F78657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062A855B-26C6-415D-AD98-8578B6F78657}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
