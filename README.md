@@ -1,28 +1,15 @@
 # FlashQuizzz
+This is the API for the application FlashQuizzz, for which the front-end repository can be found [here](https://github.com/emmanuelalesna/FlashQuizzz/). More information about this project in general can also be found there.
 
-![Process Flow](./Project3-FlashQuizz.jpeg "Process flow of FlashQuizzz")
-
-## Project Overview
-The flashcard application is designed to help users create, manage, and take quizzes using a set of flashcards. The backend is built using ASP.NET Core with Entity Framework for data management, while the frontend is implemented using React.
-
-## MVP Features
-1. User Authentication:
-    * Users will be able to create an account or log in.
-    * Secure authentication mechanism to ensure user data privacy.
-    * Use Microsoft identity framework.
-2. Manage questions:
-    * Authenticated users will allow to do CRUD on the questions.
-    * Allow users to read the cards in a random order and flip them.
-3. CI/CD Pipeline. 
-4. Frontend and Backend hosted on Azure Cloud Services.
-
+This API was created following RESTful API practices, and uses .NET, ASP.NET Core, and Entity Framework to connect to a SQL Server database.
 
 ## ERD (Entity-Relationship Diagram)
 ![Entity Relationship Diagram](./Project3-FlashQuizz-ERD.jpeg "Entity Relationship Diagram of FlashQuizzz")
 
-## Stretch Goals
-1. Have a service that randomly generates quizzes based on the flashcards.
-2. Make it look nice with React.
+The relationship between the various entities can be seen above. In short, a flash card has one category and one answer, each stored in a separate table but connected via foreign key contraints. Users are stored in another table and can own any number of flash cards. Passwords and sign-ins are managed by ASP.NET Core Identity.
 
-## Conclusion
-This project cover the main points in the curriculum we follow in the cohort "240708-NET-FS" of Revature.
+The API is modelled in three distinct layers, after the Data Access Object pattern. The controllers handle initial endpoint hits, converting incoming data into a friendly format for the rest of the API. This data is then passed to the services, which check for conformity to our business logic (making sure no duplicate categories exist, making sure no negative ID requests pass through, etc.). The DAO layer directly communicates to the database, using Entity Framework in a code-first approach to minimize SQL programming.
+
+The API provides a number of services, with the most important being the retrieval and creation of particular users based on ID or sign-in, and the CRUD operations for flash cards.
+
+This is also hosted on Azure [here](https://flashquizzz-api-2-gqe6ckakdregf4b4.eastus2-01.azurewebsites.net/).
